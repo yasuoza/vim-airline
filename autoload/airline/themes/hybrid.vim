@@ -6,7 +6,7 @@ let g:airline#themes#hybrid#palette = {}
 function! airline#themes#hybrid#refresh()
     let s:N1 = airline#themes#get_highlight('DiffAdd')
     let s:N2 = airline#themes#get_highlight('CursorLine')
-    let s:N3 = airline#themes#get_highlight('PMenu')
+    let s:N3 = airline#themes#get_highlight2(['Text', 'fg'], ['Conceal', 'bg'], 'bold')
     let g:airline#themes#hybrid#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
     let modified_group = airline#themes#get_highlight2(['Text', 'fg'], ['SpellRare', 'bg'], 'bold')
